@@ -1,0 +1,86 @@
+\documentclass[10pt]{article}
+\usepackage[
+  a4paper,
+  margin=1in,
+  headsep=18pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{setspace}
+% \usepackage{mathpazo}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+
+\definecolor{customred}{HTML}{d14836}
+
+
+\addbibresource{references.bib}
+
+\singlespacing
+% \setstretch{1.5}
+\setlength{\parskip}{1em} 
+
+\newcommand{\statement}[1]{\medskip\noindent
+  \textcolor{black}{\textbf{#1}}\space
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\textsc{\soptitle}\hfill\footnotesize
+\textbf{\yourname}\\
+\school\hfill\yourintent}
+\fancyfoot[C]{\footnotesize\thepage}
+
+\let\oldcenter\center
+\let\oldendcenter\endcenter
+\renewenvironment{center}{\setlength\topsep{0pt}\oldcenter}{\oldendcenter}
+
+\newcommand{\wordcount}{
+\begin{center}
+\rule{0.75\textwidth}{.4pt}\\
+{\footnotesize A statement of \numwords \ words}
+\end{center}
+}
+
+\newif\ifcomments
+
+\newcommand{\comment}[1]{}
+\newcommand{\todo}[1]{\ifcomments\textcolor{red}{TODO: #1}\fi}
+
+%%%%%%%%%%%%%%%%%%%%% Edit this section %%%%%%%%%%%%%%%%%%%%
+
+\commentstrue
+
+\newcommand{\soptitle}{Personal History Statement}
+\newcommand{\yourname}{Brandon Y. Yang}
+\newcommand{\yourintent}{\faLink \, \href{https://brandonyifanyang.com/}{brandonyifanyang.com} \quad \faEnvelope \, \href{mailto:branyang@virginia.edu}{branyang@virginia.edu}}
+
+\newcommand{\school}{New York University}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode,
+  colorlinks,
+]{hyperref}
+
+\begin{document}
+
+\subsection*{Why pursue a graduate degree?}
+\statement{Personal Goal and Motivation} My interest in robotics took shape while working at the Collaborative Robotics Lab with Dr. Tariq Iqbal at the University of Virginia. It was there that I began to see robots as more than just machines performing repetitive tasks. I realized they could be intelligent, collaborative, and capable of seamlessly working alongside humans. That potential deeply inspired me, and I became determined to contribute to the field. I see a graduate degree in robotics as the next step in developing the skills and knowledge needed to make meaningful advancements in robotics.
+
+\statement{Passion for Research and Learning} Research has always been a driving force for me. While some may find it tedious or frustrating, I thrive on the challenges it presents. Experiments that don't work out on the first try don't discourage me, they motivate me to dig deeper and find solutions. The process of repeating, learning, and improving is something I genuinely enjoy. For me, research isn't just about the results; it's about the journey and the endless opportunities for discovery. Not only do I gain knowledge directly related to my field of study, but I also pick up countless other insights and skills along the way—what I like to think of as the \textit{folk wisdom} of research. From troubleshooting unexpected challenges to uncovering connections I hadn’t considered before, each step in the process teaches me something new and unexpected, and that's what excites me the most. I would like to continue this journey of research and learning, and a graduate degree will provide me with the resources and support to do so.
+
+\statement{Career Goals in Teaching and Academia} Over the past two years, working as teaching assistants for various classes has been one of the most fulfilling experiences of my academic journey. I discovered a deep passion for teaching. One moment that stands out to me was during an office hour for a Machine Learning course. A student asked me, “What is Gradient Descent?” Their question was straightforward, but their confusion was evident. I took a moment to gather my thoughts and then explained the concept step by step, starting with the basics. I could see the confusion on their face gradually give way to understanding, and that moment felt incredibly rewarding. Moments like these have shown me how much I enjoy sharing knowledge and helping others grasp complex ideas. I want to continue teaching and mentoring as part of my career, and I believe a graduate degree will equip me with the expertise and experience needed to excel as both a researcher and an educator. In the future, I hope to become a professor and inspire students to pursue their passions in robotics and AI.
+
+\statement{How can I contribute to the diversity of NYU?}
+
+\end{document}
