@@ -1,0 +1,91 @@
+\documentclass[10pt]{article}
+\usepackage[
+  a4paper,
+  margin=1in,
+  headsep=18pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{setspace}
+% \usepackage{mathpazo}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+
+\definecolor{customred}{HTML}{d14836}
+
+
+\addbibresource{references.bib}
+
+\singlespacing
+% \setstretch{1.5}
+\setlength{\parskip}{1em} 
+
+\newcommand{\statement}[1]{\medskip\noindent
+  \textcolor{black}{\textbf{#1}}\space
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\textsc{\soptitle}\hfill\footnotesize
+\textbf{\yourname}\\
+\school\hfill\yourintent}
+\fancyfoot[C]{\footnotesize\thepage}
+
+\let\oldcenter\center
+\let\oldendcenter\endcenter
+\renewenvironment{center}{\setlength\topsep{0pt}\oldcenter}{\oldendcenter}
+
+\newcommand{\wordcount}{
+\begin{center}
+\rule{0.75\textwidth}{.4pt}\\
+{\footnotesize A statement of \numwords \ words}
+\end{center}
+}
+
+\newif\ifcomments
+
+\newcommand{\comment}[1]{}
+\newcommand{\todo}[1]{\ifcomments\textcolor{red}{TODO: #1}\fi}
+
+%%%%%%%%%%%%%%%%%%%%% Edit this section %%%%%%%%%%%%%%%%%%%%
+
+\commentstrue
+
+\newcommand{\soptitle}{Short Essay}
+\newcommand{\yourname}{Brandon Y. Yang}
+\newcommand{\yourintent}{\faLink \, \href{https://brandonyifanyang.com/}{brandonyifanyang.com} \quad \faEnvelope \, \href{mailto:branyang@virginia.edu}{branyang@virginia.edu}}
+
+\newcommand{\school}{University of Massachusetts Amherst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode,
+  colorlinks,
+]{hyperref}
+
+\begin{document}
+
+I've always been drawn to spaces where I can learn from others. For me, learning takes many forms—listening to podcasts or YouTube lectures, or diving into lengthy Wikipedia articles on math or history. However, I believe knowledge holds little value unless shared. This belief led me to join the community of Teaching Assistants (TA) during my undergraduate years at the University of Virginia (UVA), where I could both deepen my understanding and help others succeed.
+
+Being part of the TA community at UVA has been one of the most rewarding aspects of my undergraduate experience. I've had the opportunity to serve as a TA for different CS classes, including Computer Science Organization, Theory of Computation, and Machine Learning (ML), working with students from diverse backgrounds and varying levels of expertise. I chose to become a TA for these courses because they are technically challenging, and I felt that the insights I gained while taking them could help other students succeed.
+
+What I enjoy most about being a TA is witnessing the learning process unfold for students. One memorable moment occurred during my office hours as a ML TA when a student approached me with a simple yet profound question: \textit{What is Gradient Descent}? While most students need help with their code—which I am always glad to provide—conceptual questions like this excite me because they reflect a genuine passion for learning and a willingness to engage deeply with the material. I took a moment to organize my thoughts and then explained the key concepts and components of Gradient Descent. Watching the student gradually piece together the ideas and gain understanding was incredibly rewarding.
+
+Beyond my TA responsibilities, I've gone out of my way to share knowledge with others by starting a \href{https://www.brandonyifanyang.com/blog}{blog} on my website, where I share insights on AI and post \href{https://www.brandonyifanyang.com/notes}{notes} from the courses I've taken. The positive feedback I've received from students who found these resources helpful has been humbling and motivating. These experiences have not only deepened my technical understanding but also shaped me into a more empathetic, patient, and effective communicator.
+
+I wish to continue being an educator at UMass Amherst, learning from both students and colleagues while creating even better learning experiences for all students. I hold myself to a high standard of teaching and I am committed to providing the best possible education to every student I work with. Additionally, I plan to keep developing my notes and blog, focusing on creating more interactive content to help students learn computer science concepts. I also hope to involve more students in contributing to these online learning resources, turning them into a collaborative platform for sharing knowledge. As an undergraduate TA, working with students from diverse backgrounds has shown me the importance of inclusivity in computer science education. I aim to bring this perspective to UMass Amherst, fostering a diverse and inclusive learning environment where all students feel empowered to succeed.
+
+Teaching and sharing knowledge is also critical for robotics research. In addition to being a TA for computer science courses, I have been actively participating in reading groups in different research labs at UVA, sharing the latest research papers and discussing their implications in AI, robotics, and computer vision. I wish to continue this practice at UMass Amherst, contributing to the intellectual community and enriching the research environment.
+
+
+
+\end{document}
