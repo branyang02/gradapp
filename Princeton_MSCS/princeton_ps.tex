@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[
+  a4paper,
+  margin=1in,
+  headsep=18pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{setspace}
+% \usepackage{mathpazo}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+
+\definecolor{customred}{HTML}{d14836}
+
+
+\addbibresource{references.bib}
+
+\singlespacing
+% \setstretch{1.5}
+\setlength{\parskip}{1em} 
+
+\newcommand{\statement}[1]{\medskip\noindent
+  \textcolor{black}{\textbf{#1}}\space
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\textsc{\soptitle}\hfill\footnotesize
+\textbf{\yourname}\\
+\school\hfill\yourintent}
+\fancyfoot[C]{\footnotesize\thepage}
+
+\let\oldcenter\center
+\let\oldendcenter\endcenter
+\renewenvironment{center}{\setlength\topsep{0pt}\oldcenter}{\oldendcenter}
+
+\newcommand{\wordcount}{
+\begin{center}
+\rule{0.75\textwidth}{.4pt}\\
+{\footnotesize A statement of \numwords \ words}
+\end{center}
+}
+
+\newif\ifcomments
+
+\newcommand{\comment}[1]{}
+\newcommand{\todo}[1]{\ifcomments\textcolor{red}{TODO: #1}\fi}
+
+%%%%%%%%%%%%%%%%%%%%% Edit this section %%%%%%%%%%%%%%%%%%%%
+
+\commentstrue
+
+\newcommand{\soptitle}{Personal Statement}
+\newcommand{\yourname}{Brandon Y. Yang}
+\newcommand{\yourintent}{\faLink \, \href{https://brandonyifanyang.com/}{brandonyifanyang.com} \quad \faEnvelope \, \href{mailto:branyang@virginia.edu}{branyang@virginia.edu}}
+
+\newcommand{\school}{Princeton University}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode,
+  colorlinks,
+]{hyperref}
+
+\begin{document}
+
+When my parents dropped me off at Hong Kong Airport for my first solo trip to the United States, I was 14 and about to begin my freshman year at a new school. I was filled with worry about adapting to life in a foreign country without my family.
+
+Upon arriving in Washington D.C., I discovered my suitcase was missing. As the baggage claim emptied, I realized I had to confront this setback alone. I approached the help desk and learned my luggage would not arrive for another week. Undeterred, I met the boarding school teacher waiting for me, purchased a few essentials, and embraced the challenge of starting an unfamiliar life.
+
+Living away from home since then has shaped me profoundly. When my bike broke in ninth grade, I learned to fix it through YouTube tutorials. When I got sick, I scheduled appointments and followed treatment plans independently. These experiences taught me resourcefulness and self-reliance, making me a problem solver who faces challenges with determination.
+
+This mindset also drives my passion for research. I thrive on the challenges of experimentation and view failed attempts as opportunities to dig deeper. The iterative process of testing, troubleshooting, and refining excites me because it brings me closer to uncovering solutions.
+
+Graduate school at Princeton is the ideal place to build on these experiences. With its mentorship and resources, I am eager to grow as a researcher and take on increasingly complex challenges, bringing perseverance and determination to Princeton’s academic community.
+
+\end{document}
