@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[
+  a4paper,
+  margin=1in,
+  headsep=18pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{setspace}
+% \usepackage{mathpazo}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+
+\definecolor{customred}{HTML}{d14836}
+
+
+\addbibresource{references.bib}
+
+\singlespacing
+% \setstretch{1.5}
+\setlength{\parskip}{1em} 
+
+\newcommand{\statement}[1]{\medskip\noindent
+  \textcolor{black}{\textbf{#1}}\space
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\textsc{\soptitle}\hfill\footnotesize
+\textbf{\yourname}\\
+\school\hfill\yourintent}
+\fancyfoot[C]{\footnotesize\thepage}
+
+\let\oldcenter\center
+\let\oldendcenter\endcenter
+\renewenvironment{center}{\setlength\topsep{0pt}\oldcenter}{\oldendcenter}
+
+\newcommand{\wordcount}{
+\begin{center}
+\rule{0.75\textwidth}{.4pt}\\
+{\footnotesize A statement of \numwords \ words}
+\end{center}
+}
+
+\newif\ifcomments
+
+\newcommand{\comment}[1]{}
+\newcommand{\todo}[1]{\ifcomments\textcolor{red}{TODO: #1}\fi}
+
+%%%%%%%%%%%%%%%%%%%%% Edit this section %%%%%%%%%%%%%%%%%%%%
+
+\commentstrue
+
+\newcommand{\soptitle}{Personal Statement}
+\newcommand{\yourname}{Brandon Y. Yang}
+\newcommand{\yourintent}{\faLink \, \href{https://brandonyifanyang.com/}{brandonyifanyang.com} \quad \faEnvelope \, \href{mailto:branyang@virginia.edu}{branyang@virginia.edu}}
+
+\newcommand{\school}{Northwestern University}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode,
+  colorlinks,
+]{hyperref}
+
+\begin{document}
+
+Having lived in China, Germany, and now the US, I've found my greatest strength lies in connecting with people from diverse backgrounds. What makes these connections special isn't just our research work - it's how we share our cultures, traditions, and different ways of thinking. I've learned that making myself available to listen and genuinely trying to understand others' perspectives isn't just about being nice - it creates better research and deeper collaborations.
+
+At Northwestern, I'm excited to join a community that values these diverse perspectives. As a Teaching Assistant at UVA for courses like Computer Systems Organization, Theory of Computation, and Machine Learning, I've worked with students from many different backgrounds. What I really love is breaking down complex ideas in ways that connect with each student's unique way of thinking. Like this one time, when a student was struggling with Gradient Descent - seeing them finally grasp the concept after we worked through it together was incredibly rewarding. To reach more students, I started a \href{https://www.brandonyifanyang.com/blog}{blog} sharing AI concepts and learning materials. Getting positive feedback from students who previously found these topics intimidating keeps motivating me to create more accessible resources.
+
+Teaching and learning are deeply connected for me. At Northwestern, I want to keep helping students, especially those from underrepresented groups. I plan to continue to create interactive resources that make computer science concepts more approachable and continue mentoring students who might feel out of place in tech. Doing this also helps me grow as a researcher - I've found that explaining complex ideas in simple terms helps me understand them better myself. I want to keep building these connections between teaching and research, and I'm excited to collaborate with other educators and researchers at Northwestern to make this happen.
+
+Similar to my research in robotics and AI, which crosses many different fields, I really enjoy learning from people with different academic backgrounds. Sometimes the best ideas come from conversations with people studying completely different things - their perspectives help me see robotics problems in new ways. At Northwestern, I want to keep building these kinds of connections, through reading groups or collaborative projects. I've found that when you bring together people with different experiences and expertise, you end up with much more innovative ideas.
+
+What excites me most about Northwestern is the chance to be part of a community that values these diverse perspectives not just in theory, but in practice. I want to contribute to building spaces where everyone - regardless of their background or field of study - feels empowered to share their unique viewpoint and make meaningful contributions.
+
+\end{document}
